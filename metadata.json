@@ -1,0 +1,6 @@
+{
+  "name": "MADAR | مدار",
+  "description": "تطبيق تسويق بالعمولة لمنتجات موقع مدار (madar-studio-2.ai.studio) من أمازون مصر، جوميا مصر، ونون مصر بالجنيه المصري، مع تتبع الأرباح وتحديث الأسعار التلقائي وروابط الإحالة ولوحة تحكم الطلبات والتقارير.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
