@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إثبات الملكية والإفصاح القانوني | تطبيق مدار (MADAR)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F5132;
+            --primary-dark: #0A3622;
+            --primary-light: #198754;
+            --accent-gold: #D4AF37;
+            --bg-light: #F8F9FA;
+            --surface: #FFFFFF;
+            --text-main: #212529;
+            --text-muted: #6C757D;
+            --border: #E9ECEF;
+            --font-ar: 'Cairo', system-ui, -apple-system, sans-serif;
+            --font-en: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-ar);
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.8;
+            direction: rtl;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark), #144933);
+            color: #ffffff;
+            padding: 48px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .header h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .badge-pill {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.25);
+            border: 1px solid var(--accent-gold);
+            color: #FFF3CD;
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #E8F5E9;
+            padding-bottom: 8px;
+        }
+
+        .section-title span.badge {
+            background: var(--accent-gold);
+            color: #000;
+            font-size: 0.8rem;
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: 800;
+        }
+
+        p, li {
+            margin-bottom: 14px;
+            color: #333;
+            font-size: 1.02rem;
+        }
+
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .meta-table th, .meta-table td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            text-align: right;
+            font-size: 0.98rem;
+        }
+
+        .meta-table th {
+            background-color: #F8F9FA;
+            color: var(--primary);
+            font-weight: 700;
+            width: 35%;
+        }
+
+        .highlight-box {
+            background-color: #FEF9E7;
+            border-right: 4px solid var(--accent-gold);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #664D03;
+        }
+
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-toggle {
+            cursor: pointer;
+            border: none;
+            background: #fff;
+            color: var(--primary);
+            padding: 8px 18px;
+            border-radius: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-family: inherit;
+        }
+
+        .en-content {
+            direction: ltr;
+            text-align: left;
+            font-family: var(--font-en);
+            display: none;
+        }
+
+        .en-content .meta-table th, .en-content .meta-table td {
+            text-align: left;
+        }
+
+        .en-content .highlight-box {
+            border-right: none;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="badge-pill">شهادة إثبات الملكية الرسمية | Proof of Ownership & Legal Disclosure</div>
+        <h1>تطبيق مدار (MADAR)</h1>
+        <p>بيان إثبات الملكية، حقوق الملكية الفكرية، وإفصاح التسويق بالعمولة</p>
+    </div>
+
+    <div class="container">
+        <div class="lang-switch">
+            <button class="btn-toggle" onclick="toggleLanguage()" id="toggleBtn">🌐 Switch to English (عرض بالإنجليزية)</button>
+        </div>
+
+        <!-- Arabic Content -->
+        <div class="card ar-content" id="arContent">
+            <h2 class="section-title"><span class="badge">توثيق</span> إثبات الملكية وتحديد هوية المطور</h2>
+            <p>
+                تُقر هذه الوثيقة الرسمية الصادرة عن المطور بأن <strong>تطبيق مدار (MADAR)</strong> وكافة مكوناته البرمجية وتصميماته وعلامته التجارية مملوكة ومطورة بالكامل بواسطة المطور المسجل أدناه، وذلك لتقديمه إلى منصات التطبيقات (Google Play Console، Amazon Developer Portal، Huawei AppGallery):
+            </p>
+
+            <table class="meta-table">
+                <tr>
+                    <th>اسم التطبيق الرسمي</th>
+                    <td>مدار | تسويق وعروض مصر (MADAR)</td>
+                </tr>
+                <tr>
+                    <th>معرّف الحزمة البرمجية (Package ID)</th>
+                    <td><code>com.aistudio.madar.egypt</code></td>
+                </tr>
+                <tr>
+                    <th>اسم المطور / المالك المسؤول</th>
+                    <td><strong>AElmalieh</strong></td>
+                </tr>
+                <tr>
+                    <th>البريد الإلكتروني الرسمي للمطور</th>
+                    <td><a href="mailto:AElmalieh@gmail.com">AElmalieh@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <th>مستودع الكود المصدري على GitHub</th>
+                    <td>
+                        <a href="https://github.com/aelmalieh-wq/Madar-app" target="_blank">github.com/aelmalieh-wq/Madar-app</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>المنصة المستهدفة والعملة الأساسية</th>
+                    <td>جمهورية مصر العربية - الجنيه المصري (EGP)</td>
+                </tr>
+            </table>
+
+            <h2 class="section-title"><span class="badge">ملكية</span> حقوق الملكية الفكرية (Intellectual Property)</h2>
+            <p>
+                كافة الأكواد المصدرية المطورة بلغة Kotlin وتقنية Jetpack Compose، والتصميمات الرقمية، وقواعد البيانات المحلية، وهندسة واجهة المستخدم الخاصة بتطبيق مدار هي ملكية حصرية للمطور <strong>AElmalieh</strong>.
+            </p>
+            <p>
+                التطبيق مُخصص لعرض ومقارنة العروض وتسهيل عمليات التسوق بالعمولة الإلكترونية بصورة قانونية ونظامية بنسبة 100%.
+            </p>
+
+            <div class="highlight-box">
+                <strong>إخلاء مسؤولية العلامات التجارية الشريكة (Third-Party Trademarks):</strong><br>
+                علامات وأسماء المتاجر والشركات المعروضة في التطبيق ("أمازون مصر Amazon.eg"، "نون مصر Noon.com"، "جوميا مصر Jumia.com.eg") هي علامات تجارية مسجلة ومملوكة لأصحابها الشرعيين. تطبيق مدار يعمل كمنصة وسيطة ومستقلة لعرض الصفقات وروابط التسويق بالعمولة المعتمدة دون ادعاء تمثيل رسمي أو ملكية لأي من تلك العلامات التجارية.
+            </div>
+
+            <h2 class="section-title"><span class="badge">إفصاح</span> إفصاح التسويق بالعمولة (Affiliate Disclosure)</h2>
+            <p>
+                تطبيق مدار يشارك في برامج التسويق بالعمولة الرسمية المقدمة من المتاجر الكبرى في مصر. الروابط المضمنة في التطبيق قد تتضمن معرّفات تابعة (Affiliate IDs) تتيح للمطور الحصول على عمولة تسويقية عن عمليات الشراء المؤهلة المنجزة من قبل المستخدمين، دون تحميل المشتري أي تكاليف إضافية على الإطلاق.
+            </p>
+
+            <h2 class="section-title"><span class="badge">اتصال</span> الاتصال والتحقق</h2>
+            <p>
+                لأغراض التحقق من قِبل فرق مراجعة المتاجر (Google Play Review Team أو Amazon Appstore Review)، يمكن التواصل المباشر مع المطور المعتمد:
+            </p>
+            <p>
+                📧 <strong>البريد الإلكتروني المعتمد:</strong> <a href="mailto:AElmalieh@gmail.com">AElmalieh@gmail.com</a><br>
+                🌐 <strong>الموقع الرسمي للتطبيق:</strong> <a href="https://madar-studio-2.ai.studio/" target="_blank">madar-studio-2.ai.studio</a>
+            </p>
+        </div>
+
+        <!-- English Content -->
+        <div class="card en-content" id="enContent">
+            <h2 class="section-title"><span class="badge">Verification</span> Proof of Ownership & Developer Identity</h2>
+            <p>
+                This official disclosure certifies that the <strong>MADAR App</strong> and all its associated software components, assets, and design frameworks are exclusively owned and developed by the registered developer below, for publication and verification across official application stores (Google Play Console, Amazon Developer Portal, Huawei AppGallery):
+            </p>
+
+            <table class="meta-table">
+                <tr>
+                    <th>Official App Title</th>
+                    <td>MADAR | Egypt Shopping & Deals (مدار)</td>
+                </tr>
+                <tr>
+                    <th>Package Identifier (Application ID)</th>
+                    <td><code>com.aistudio.madar.egypt</code></td>
+                </tr>
+                <tr>
+                    <th>Developer & Sole Owner</th>
+                    <td><strong>AElmalieh</strong></td>
+                </tr>
+                <tr>
+                    <th>Official Contact Email</th>
+                    <td><a href="mailto:AElmalieh@gmail.com">AElmalieh@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <th>GitHub Source Repository</th>
+                    <td>
+                        <a href="https://github.com/aelmalieh-wq/Madar-app" target="_blank">github.com/aelmalieh-wq/Madar-app</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Primary Region & Currency</th>
+                    <td>Egypt - Egyptian Pound (EGP)</td>
+                </tr>
+            </table>
+
+            <h2 class="section-title"><span class="badge">IP</span> Intellectual Property Rights</h2>
+            <p>
+                All source code written in Kotlin and Jetpack Compose, UI architecture, local database schemas, and proprietary assets of MADAR are the exclusive property of <strong>AElmalieh</strong>.
+            </p>
+
+            <div class="highlight-box">
+                <strong>Third-Party Trademark Disclaimer:</strong><br>
+                Brand names, logos, and registered trademarks ("Amazon Egypt", "Noon", "Jumia") referenced within the application belong to their respective corporate owners. MADAR is an independent deals aggregation and affiliate marketing tool and does not claim direct ownership or corporate affiliation beyond verified affiliate partner agreements.
+            </div>
+
+            <h2 class="section-title"><span class="badge">Disclosure</span> Affiliate Marketing Disclosure</h2>
+            <p>
+                MADAR participates in official affiliate programs in Egypt. Product links provided within the app may contain affiliate tags that allow the developer to receive referral compensation on eligible customer orders without any extra charge or price increase to the user.
+            </p>
+
+            <h2 class="section-title"><span class="badge">Contact</span> Contact & Store Review Inquiries</h2>
+            <p>
+                For store review verification (Google Play, Amazon Appstore), inquiries can be directed to the verified developer email:
+            </p>
+            <p>
+                📧 <strong>Email:</strong> <a href="mailto:AElmalieh@gmail.com">AElmalieh@gmail.com</a><br>
+                🌐 <strong>Website:</strong> <a href="https://madar-studio-2.ai.studio/" target="_blank">madar-studio-2.ai.studio</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 تطبيق مدار (MADAR) - جميع الحقوق محفوظة لـ AElmalieh</p>
+        <p>
+            <a href="/privacy.html">سياسة الخصوصية (Privacy Policy)</a> | 
+            <a href="/ownership.html">إثبات الملكية والإفصاح (Ownership & Disclosure)</a>
+        </p>
+    </div>
+
+    <script>
+        let isArabic = true;
+        function toggleLanguage() {
+            isArabic = !isArabic;
+            document.getElementById('arContent').style.display = isArabic ? 'block' : 'none';
+            document.getElementById('enContent').style.display = isArabic ? 'none' : 'block';
+            document.body.dir = isArabic ? 'rtl' : 'ltr';
+            document.getElementById('toggleBtn').innerText = isArabic ? '🌐 Switch to English (عرض بالإنجليزية)' : '🌐 عرض باللغة العربية (Switch to Arabic)';
+        }
+    </script>
+</body>
+</html>

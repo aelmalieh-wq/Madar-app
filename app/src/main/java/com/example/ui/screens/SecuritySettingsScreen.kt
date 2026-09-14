@@ -56,6 +56,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.model.AppSettings
+import com.example.ui.components.AppFooter
 import com.example.ui.theme.MadarEmeraldPrimary
 import com.example.ui.theme.MadarGold
 import com.example.ui.theme.MadarNavy
@@ -362,6 +363,11 @@ fun SecuritySettingsScreen(
                     }
                 }
             }
+        }
+
+        // App Footer with Legal and Ownership links
+        item {
+            AppFooter(isArabic = isArabic)
         }
     }
 }

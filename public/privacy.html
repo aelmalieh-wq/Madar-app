@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | تطبيق مدار (MADAR)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F5132;
+            --primary-dark: #0A3622;
+            --primary-light: #198754;
+            --accent-gold: #D4AF37;
+            --bg-light: #F8F9FA;
+            --surface: #FFFFFF;
+            --text-main: #212529;
+            --text-muted: #6C757D;
+            --border: #E9ECEF;
+            --font-ar: 'Cairo', system-ui, -apple-system, sans-serif;
+            --font-en: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-ar);
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.8;
+            direction: rtl;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: #ffffff;
+            padding: 48px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .badge-pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 14px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -24px auto 60px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #E8F5E9;
+            padding-bottom: 8px;
+        }
+
+        .section-title span.num {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        p, li {
+            margin-bottom: 14px;
+            color: #333;
+            font-size: 1.02rem;
+        }
+
+        ul {
+            padding-right: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #F4FBF7;
+            border-right: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch a {
+            display: inline-block;
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 6px 16px;
+            border-radius: 20px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        }
+
+        .en-content {
+            direction: ltr;
+            text-align: left;
+            font-family: var(--font-en);
+            display: none;
+        }
+
+        .en-content .section-title {
+            border-bottom: 2px solid #E8F5E9;
+        }
+
+        .en-content ul {
+            padding-left: 24px;
+            padding-right: 0;
+        }
+
+        .en-content .highlight-box {
+            border-right: none;
+            border-left: 4px solid var(--primary);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+
+        .btn-toggle {
+            cursor: pointer;
+            border: none;
+            background: #fff;
+            color: var(--primary);
+            padding: 8px 18px;
+            border-radius: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="badge-pill">وثيقة سياسة الخصوصية الرسمية | Privacy Policy</div>
+        <h1>تطبيق مدار (MADAR)</h1>
+        <p>المنصة الذكية لعروض ومقارنة منتجات المتاجر الإلكترونية في مصر</p>
+    </div>
+
+    <div class="container">
+        <div class="lang-switch">
+            <button class="btn-toggle" onclick="toggleLanguage()" id="toggleBtn">🌐 Switch to English (عرض بالإنجليزية)</button>
+        </div>
+
+        <!-- Arabic Content -->
+        <div class="card ar-content" id="arContent">
+            <h2 class="section-title"><span class="num">١</span> مقدمة عامة والتزام الخصوصية</h2>
+            <p>
+                نحن في <strong>تطبيق مدار (MADAR)</strong> المطور بواسطة <strong>AElmalieh</strong> نلتزم بأعلى معايير الشفافية وحماية خصوصية وأمان مستخدمينا. تم تصميم هذه الوثيقة لتوضيح السياسات المتبعة بشأن جمع واستخدام وحماية البيانات وفقاً للوائح متجر Google Play، ومتجر Amazon Appstore، والقوانين المنظمة لخصوصية البيانات.
+            </p>
+            <p>
+                باستخدامك لتطبيق مدار أو موقعنا الإلكتروني، فإنك تقر وتوافق على الممارسات الموضحة في هذه السياسة.
+            </p>
+
+            <h2 class="section-title"><span class="num">٢</span> البيانات التي يتم التعامل معها</h2>
+            <p><strong>تطبيق مدار تطبيق آمن ولا يتطلب تسجيل حساب إجباري، ولا يطلب أية أذونات حساسة:</strong></p>
+            <ul>
+                <li><strong>البيانات المحفوظة محلياً (On-Device Storage):</strong> تفضيلات المستخدم (مثل العملة المختارة "الجنيه المصري EGP"، واللغة، وسجل الطلبات غير المتصلة) تُخزن محلياً فقط داخل مساحة التخزين الخاصة بالتطبيق (Room Database / SharedPreferences) على جهاز المستخدم، ولا تُنقل لأي خوادم خارجية.</li>
+                <li><strong>بيانات رمز الأمان (Security PIN):</strong> إذا قمت بتعيين رمز حماية في التطبيق، فإنه يُخزن محلياً بشكل مشفر داخل جهازك لحماية إحصائياتك الشخصية.</li>
+                <li><strong>الأذونات الحساسة:</strong> التطبيق <em>لا يطلب إطلاقاً</em> صلاحية الوصول إلى الموقع الجغرافي (GPS)، أو جهات الاتصال، أو الكاميرا، أو الميكروفون، أو ملفات الوسائط الخاصة. الصلاحية الوحيدة المستخدمة هي الوصول للإنترنت <code>android.permission.INTERNET</code> لتحديث أسعار العروض فقط.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>تأكيد هام:</strong> نحن لا نبيع، ولا نؤجر، ولا نشارك أي بيانات شخصية للمستخدمين مع أي جهات خارجية أو معلنين بأي شكل من الأشكال.
+            </div>
+
+            <h2 class="section-title"><span class="num">٣</span> الروابط التسويقية والمتاجر التابعة (Affiliate Disclosure)</h2>
+            <p>
+                يعرض تطبيق مدار روابط مباشرة لمنتجات متوفرة على كبرى منصات التجارة الإلكترونية الموثوقة العاملة في جمهورية مصر العربية:
+            </p>
+            <ul>
+                <li><strong>أمازون مصر (Amazon.eg)</strong></li>
+                <li><strong>نون مصر (Noon.com)</strong></li>
+                <li><strong>جوميا مصر (Jumia.com.eg)</strong></li>
+            </ul>
+            <p>
+                عند النقر على زر "شراء من المتجر" أو أي رابط خارجي، يتم توجيهك إلى الموقع أو التطبيق الرسمي للمتجر المعني. نود الإيضاح أن تطبيق مدار يشارك في برامج التسويق بالعمولة (Affiliate Marketing Programs)، وقد يحصل على عمولة رمزية عند إتمام عمليات الشراء المؤهلة من خلال تلك الروابط دون أي زيادة في التكلفة على المشتري.
+            </p>
+            <p>
+                كل متجر إلكتروني مستقل يخضع لسياسة الخصوصية وشروط الاستخدام الخاصة به، وننصح بمراجعة سياسات كل منصة عند الشراء.
+            </p>
+
+            <h2 class="section-title"><span class="num">٤</span> أمان البيانات والاحتفاظ بها</h2>
+            <p>
+                نطبق تدابير تقنية وبرمجية صارمة لضمان سلامة بياناتك أثناء استخدام التطبيق:
+            </p>
+            <ul>
+                <li>جميع الاتصالات بالخوادم مشفرة عبر بروتوكول HTTPS الآمن.</li>
+                <li>يمكن للمستخدم مسح كافة البيانات المسجلة محلياً في أي وقت بمجرد مسح بيانات التطبيق أو إلغاء تثبيته من إعدادات الهاتف.</li>
+            </ul>
+
+            <h2 class="section-title"><span class="num">٥</span> خصوصية الأطفال</h2>
+            <p>
+                تطبيق مدار ليس موجهاً للأطفال دون سن 13 عاماً، ولا نجمع عمداً أية معلومات تعريف شخصية من الأطفال.
+            </p>
+
+            <h2 class="section-title"><span class="num">٦</span> التعديلات على هذه السياسة</h2>
+            <p>
+                نحتفظ بالحق في تحديث سياسة الخصوصية هذه دورياً لمواكبة التحديثات التقنية والقانونية. سيتم نشر أي تحديث على هذه الصفحة مع تحديث تاريخ السريان.
+            </p>
+
+            <h2 class="section-title"><span class="num">٧</span> التواصل معنا</h2>
+            <p>إذا كان لديك أي استفسار أو تساؤل بشأن سياسة الخصوصية، يرجى التواصل مع مسؤول التطوير عبر:</p>
+            <p>
+                📧 <strong>البريد الإلكتروني:</strong> <a href="mailto:AElmalieh@gmail.com">AElmalieh@gmail.com</a><br>
+                📂 <strong>مستودع الكود والمشروع:</strong> <a href="https://github.com/aelmalieh-wq/Madar-app" target="_blank">github.com/aelmalieh-wq/Madar-app</a><br>
+                📅 <strong>تاريخ آخر تحديث:</strong> 14 سبتمبر 2026
+            </p>
+        </div>
+
+        <!-- English Content -->
+        <div class="card en-content" id="enContent">
+            <h2 class="section-title"><span class="num">1</span> Overview & Commitment to Privacy</h2>
+            <p>
+                At <strong>MADAR App</strong>, developed by <strong>AElmalieh</strong>, we are committed to protecting your privacy and ensuring a transparent user experience. This Privacy Policy describes our practices regarding user data compliance with Google Play Developer Policies, Amazon Appstore guidelines, and international data protection standards.
+            </p>
+            <p>
+                By using the MADAR mobile application or web services, you acknowledge and agree to the practices described in this policy.
+            </p>
+
+            <h2 class="section-title"><span class="num">2</span> Information Collected & Processed</h2>
+            <p><strong>MADAR is designed with privacy-by-default and does not require account registration or intrusive device permissions:</strong></p>
+            <ul>
+                <li><strong>Local Device Storage:</strong> User preferences (e.g., currency selection "EGP", preferred language, offline order records) are stored strictly locally on your device via Room Database and SharedPreferences. No personal identifiable information is transmitted to external servers.</li>
+                <li><strong>Security PIN:</strong> If enabled, your security PIN is encrypted and stored locally to protect your private administrative view.</li>
+                <li><strong>Permissions:</strong> The application does not request access to contacts, camera, microphone, device location (GPS), or personal media storage. It only uses <code>android.permission.INTERNET</code> to fetch real-time product prices.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Our Guarantee:</strong> We do not sell, rent, monetize, or trade any personal user data with third parties or advertising networks.
+            </div>
+
+            <h2 class="section-title"><span class="num">3</span> Affiliate Disclosure & Third-Party Retailers</h2>
+            <p>
+                MADAR serves as a smart deals aggregator and catalog for products available on leading official e-commerce platforms in Egypt:
+            </p>
+            <ul>
+                <li><strong>Amazon Egypt (Amazon.eg)</strong></li>
+                <li><strong>Noon Egypt (Noon.com)</strong></li>
+                <li><strong>Jumia Egypt (Jumia.com.eg)</strong></li>
+            </ul>
+            <p>
+                When you click "Buy from Store" or select a product link, you are redirected to the official platform of the respective merchant. MADAR participates in affiliate marketing programs, meaning we may earn a small referral commission on qualifying purchases at zero extra cost to the buyer.
+            </p>
+            <p>
+                Each third-party platform operates under its own distinct Privacy Policy and Terms of Service. We encourage users to inspect their policies upon purchasing.
+            </p>
+
+            <h2 class="section-title"><span class="num">4</span> Data Security & Retention</h2>
+            <p>
+                We implement industry-standard cryptographic protocols (HTTPS / SSL) for all price-fetch operations. Users can erase all stored application data at any time by clearing application storage in Android system settings or uninstalling the app.
+            </p>
+
+            <h2 class="section-title"><span class="num">5</span> Children's Privacy</h2>
+            <p>
+                MADAR is not directed towards children under 13 years of age, and we do not knowingly solicit or collect personal information from minors.
+            </p>
+
+            <h2 class="section-title"><span class="num">6</span> Policy Updates</h2>
+            <p>
+                We reserve the right to revise this Privacy Policy periodically. Any amendments will be reflected on this public URL.
+            </p>
+
+            <h2 class="section-title"><span class="num">7</span> Contact Us</h2>
+            <p>If you have any questions or concerns regarding our privacy practices, please contact our lead developer:</p>
+            <p>
+                📧 <strong>Email:</strong> <a href="mailto:AElmalieh@gmail.com">AElmalieh@gmail.com</a><br>
+                📂 <strong>GitHub Repository:</strong> <a href="https://github.com/aelmalieh-wq/Madar-app" target="_blank">github.com/aelmalieh-wq/Madar-app</a><br>
+                📅 <strong>Last Updated:</strong> September 14, 2026
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 تطبيق مدار (MADAR) - جميع الحقوق محفوظة لـ AElmalieh</p>
+        <p>
+            <a href="/privacy.html">سياسة الخصوصية (Privacy Policy)</a> | 
+            <a href="/ownership.html">إثبات الملكية والإفصاح (Ownership & Disclosure)</a>
+        </p>
+    </div>
+
+    <script>
+        let isArabic = true;
+        function toggleLanguage() {
+            isArabic = !isArabic;
+            document.getElementById('arContent').style.display = isArabic ? 'block' : 'none';
+            document.getElementById('enContent').style.display = isArabic ? 'none' : 'block';
+            document.body.dir = isArabic ? 'rtl' : 'ltr';
+            document.getElementById('toggleBtn').innerText = isArabic ? '🌐 Switch to English (عرض بالإنجليزية)' : '🌐 عرض باللغة العربية (Switch to Arabic)';
+        }
+    </script>
+</body>
+</html>

@@ -70,6 +70,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.data.model.AppSettings
 import com.example.data.model.Product
+import com.example.ui.components.AppFooter
 import com.example.ui.components.CreateOrderDialog
 import com.example.ui.components.EditProductPriceDialog
 import com.example.ui.components.ProfitCalculatorDialog
@@ -353,6 +354,11 @@ fun ProductsScreen(
                     onShare = { shareDialogProduct = product },
                     onEditPrice = { editPriceDialogProduct = product }
                 )
+            }
+
+            // App Footer with Legal and Ownership links
+            item {
+                AppFooter(isArabic = isArabic)
             }
         }
     }

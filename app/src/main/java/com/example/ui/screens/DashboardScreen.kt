@@ -73,6 +73,7 @@ import com.example.data.model.AppSettings
 import com.example.data.model.Order
 import com.example.data.model.OrderStatus
 import com.example.data.model.Product
+import com.example.ui.components.AppFooter
 import com.example.ui.components.CreateOrderDialog
 import com.example.ui.components.MainNavTab
 import com.example.ui.components.ProfitCalculatorDialog
@@ -537,6 +538,11 @@ fun DashboardScreen(
                     }
                 }
             }
+        }
+
+        // App Footer with Legal and Ownership links
+        item {
+            AppFooter(isArabic = isArabic)
         }
     }
 
