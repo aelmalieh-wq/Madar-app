@@ -50,7 +50,7 @@ import com.example.ui.theme.MadarGold
 import com.example.ui.theme.MadarNavy
 
 object LegalLinks {
-    const val BASE_WEB_URL = "https://ais-pre-gfd52btzdlf3pwwxwinrgu-475491529209.europe-west2.run.app"
+    const val BASE_WEB_URL = "https://aelmalieh-wq.github.io/Madar-app/public"
     const val PRIVACY_URL = "$BASE_WEB_URL/privacy.html"
     const val OWNERSHIP_URL = "$BASE_WEB_URL/ownership.html"
     const val OFFICIAL_WEBSITE_URL = "https://madar-studio-2.ai.studio/"
@@ -188,7 +188,7 @@ fun AppFooter(
                 FooterActionChip(
                     icon = Icons.Default.Description,
                     title = if (isArabic) "المستودع البرمجي" else "GitHub Repo",
-                    subtitle = "aelmalieh-wq/Madar",
+                    subtitle = "aelmalieh-wq/Madar-app",
                     color = MadarNavy,
                     testTag = "footer_github_link",
                     onClick = { LegalLinks.openUrl(context, LegalLinks.GITHUB_REPO_URL) }
@@ -200,9 +200,9 @@ fun AppFooter(
             // Copyright & Store verification badge
             Text(
                 text = if (isArabic)
-                    "معتمد لمتجر Google Play ومطوري Amazon • الإصدار 1.0.0\nجميع الحقوق محفوظة للمطور AElmalieh © 2026"
+                    "معتمد لمتجر Google Play ومطوري Amazon • الإصدار 1.0.4\nجميع الحقوق محفوظة للمطور AElmalieh © 2026"
                 else
-                    "Verified for Google Play & Amazon Appstore • Version 1.0.0\nAll Rights Reserved © 2026 AElmalieh",
+                    "Verified for Google Play & Amazon Appstore • Version 1.0.4\nAll Rights Reserved © 2026 AElmalieh",
                 textAlign = TextAlign.Center,
                 fontSize = 10.5.sp,
                 lineHeight = 16.sp,
